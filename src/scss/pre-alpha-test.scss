@@ -1,0 +1,12 @@
+body {
+    display: flex;
+    width: 1920;
+    height: 1080;
+    background-color: aquamarine;
+    .test-css {
+        align-self: center;
+        flex-basis: 320px;
+        height: 640px;
+        background-color: blueviolet;
+    }
+}

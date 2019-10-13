@@ -23,24 +23,43 @@ module.exports = {
         use: [
             {
                 loader: 'style-loader'
-            },
-            {
+            },{
                 loader: MiniCssExtractPlugin.loader,
                 options: {
                   publicPath: '../',
                   hmr: process.env.NODE_ENV === 'development',
                 },
-            },
-            {
+            },{
                 loader:'css-loader',
                 options: { sourceMap: true }
-            },
-            {
+            },{
                 loader: 'postcss-loader',
                 options: { sourceMap: true, config: { path: 'src/js/postcss.config.js' } }
             }
         ],
-      },
+    },{
+        test: /\.scss$/,
+        use: [
+            {
+                loader: 'style-loader'
+            },{
+                loader: MiniCssExtractPlugin.loader,
+                options: {
+                  publicPath: '../',
+                  hmr: process.env.NODE_ENV === 'development',
+                },
+            },{
+                loader:'css-loader',
+                options: { sourceMap: true }
+            },{
+                loader: 'postcss-loader',
+                options: { sourceMap: true, config: { path: 'src/js/postcss.config.js' } }
+            },{
+                loader: 'sass-loader',
+                options: { sourceMap: true }
+            }
+        ]
+    }
     ]
   },
   plugins: [
