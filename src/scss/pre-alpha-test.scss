@@ -1,9 +1,11 @@
 body {
     display: flex;
-    width: 1920;
-    height: 1080;
+    width: 1920px;
+    height: 1080px;
     background-color: aquamarine;
     .test-css {
+        font-size: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         align-self: center;
         flex-basis: 320px;
         height: 640px;

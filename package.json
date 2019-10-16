@@ -8,8 +8,8 @@
     "url": "git+https://github.com/ReCen20/Omega-core.git"
   },
   "scripts": {
-    "dev": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production"
+    "dev": "webpack-dev-server --open --config build/webpack.dev.conf.js",
+    "build": "webpack --config build/webpack.build.conf.js"
   },
   "author": "ReCen20",
   "license": "ISC",
@@ -36,6 +36,7 @@
     "style-loader": "^1.0.0",
     "webpack": "^4.41.1",
     "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.8.2"
+    "webpack-dev-server": "^3.8.2",
+    "webpack-merge": "^4.2.2"
   }
 }
