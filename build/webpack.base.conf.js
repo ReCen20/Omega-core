@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
-  dist: path.join(__dirname, '../dist'),
+  dist: path.join(__dirname, '../docs'),
   assets: 'assets/'
 }
 
@@ -63,7 +63,7 @@ module.exports = {
                 },
             },{
                 loader:'css-loader',
-                options: { sourceMap: true }
+                options: { sourceMap: true, url: false}
             },{
                 loader: 'postcss-loader',
                 options: { sourceMap: true, config: { path: 'src/js/postcss.config.js' } }
@@ -87,7 +87,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: false,
       template: `${PATHS.src}/index.html`,
-      filename: 'index.html'
+      filename: 'index.html',
+      inject: false
     })
   ],
 }
