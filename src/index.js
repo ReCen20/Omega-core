@@ -1,3 +1,3 @@
 import "./js/pre-alpha-test";
-import "./css/pre-alpha-test.css";
-import "./scss/main.scss";
+import "./assets/css/pre-alpha-test.css";
+import "./assets/scss/main.scss";
